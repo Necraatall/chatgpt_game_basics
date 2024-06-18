@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rpg_game:
+    build: .
+    container_name: rpg_game
+    volumes:
+      - .:/app
+    ports:
+      - "8020:8000"
+    env_file:
+      - .env
